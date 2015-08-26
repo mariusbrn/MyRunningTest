@@ -1,0 +1,35 @@
+
+<md-toolbar class="md-warn">
+    <div class="md-toolbar-tools">
+        <h2 class="md-flex">Running Heroes Test</h2>
+    </div>
+</md-toolbar>
+
+<md-content >
+    <div layout="row" layout-align="center">
+      <div flex="50" flex-sm="100">
+        
+        <form name="searchForm">
+            <md-input-container class="md-warn">
+              <label>Search</label>
+              <input ng-model="search.term">
+            </md-input-container>
+            <md-button class="md-warn md-raised" ng-click="searchRepo()" ng-disabled="search.term.length < 3">OK</md-button>
+        </form>
+
+        <md-list class="list">
+          <md-subheader class="md-no-sticky" ng-show="search.result">{{search.result.total_count}} repos found</md-subheader>
+          <md-list-item class="md-2-line fade" ng-click="goToRepo(repo.id)" ng-repeat-start="repo in search.result.items">
+            <img ng-src="{{repo.owner.avatar_url}}" class="md-avatar" alt="{{repo.name}}" />
+            <div class="md-list-item-text">
+              <h3>{{ repo.name }}</h3>
+              <p>{{ repo.owner.login }}</p>
+            </div>
+          </md-list-item>
+          <md-divider ng-repeat-end></md-divider>
+        </md-list>
+
+      </div>
+    </div>
+</md-content>
+

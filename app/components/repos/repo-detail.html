@@ -1,0 +1,88 @@
+
+<md-content class="detail">
+    <md-button class="btn-back" aria-label="Back" ng-href="#/repos/">Back</md-button>
+    <div layout="row" layout-align="center center" layout-wrap>
+        <!--  logo left -->
+        <div flex="33" flex-sm="80" flex-md="25">
+          <img class="logo" src="assets/img/logo.png" alt="logo">
+        </div>
+        <!--  /logo left -->
+
+        <!--  medal -->
+        <div flex="33" flex-sm="80" flex-md="50">
+            <div class="outside-medal"></div>
+            <div class="medal">
+                <div class="medal-content fade" ng-if="repo">
+
+                    <!--  upper stars -->
+                    <div layout="row" layout-align="center">
+                        
+                        <div flex="50">
+                            <img class="icon star-icon" src="assets/img/star.png" alt="star">
+                            <img class="icon star-icon" src="assets/img/star.png" alt="star">
+                            <img class="icon star-icon" src="assets/img/star.png" alt="star">
+                        </div>
+                    </div>
+                    <!--  /upper stars -->
+
+                    <!--  username  -->
+                    <div layout="row" layout-align="center">    
+                        <div flex="50">    
+                           <div>
+                                BRAVO<br><span class="username">{{repo.owner.login}}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  /username  -->
+
+                    <!--  repo infos -->
+                    <div layout="row" layout-align="center">   
+                        <div flex="33">
+                            <img class="icon starred-icon" src="assets/img/starred.png" alt="starred">
+                            <p>{{repo.stargazers_count}} stars</p>
+                        </div>
+                        <div flex="33">
+                            <img class="icon watch-icon" src="assets/img/watch.png" alt="watch">
+                            <p>{{repo.subscribers_count}} watch</p>                    
+                        </div>
+                        <div flex="33">
+                            <img class="icon fork-icon" src="assets/img/forks.png" alt="forks">
+                            <p>{{repo.forks}} forks</p>                    
+                        </div>
+                    </div>
+                    <!--  /repo infos -->
+                    
+                    <!--  thumbs -->
+                    <div layout="row" layout-align="center">    
+                        <div flex="50">
+                            <div>
+                                <img class="icon thumb" src="assets/img/thumb.png" alt="thumb">
+                                <img class="icon thumb" src="assets/img/thumb.png" alt="thumb">
+                            </div>
+                        </div>
+                    </div>
+                    <!--  /thumbs --> 
+                    
+                    <!--  lower stars -->
+                    <div layout="row" layout-align="center">    
+                        <div flex="50" >
+                            <img class="icon star-icon" src="assets/img/star.png" alt="star">
+                            <img class="icon star-icon" src="assets/img/star.png" alt="star">
+                            <img class="icon star-icon" src="assets/img/star.png" alt="star">
+                        </div>     
+                    </div>
+                    <!--  /lower stars -->
+        
+                </div>                                             
+            </div>
+        </div>
+        <!--  /medal -->
+
+        <!--  logo right -->
+        <div flex="33" flex-sm="80" flex-md="25">
+              <img class="logo" src="assets/img/logo.png" alt="logo">
+        </div>
+    <!--  logo right -->
+    </div>
+</md-content>
+
